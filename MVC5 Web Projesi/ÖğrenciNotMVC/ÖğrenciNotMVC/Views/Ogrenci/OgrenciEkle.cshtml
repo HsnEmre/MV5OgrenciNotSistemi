@@ -1,0 +1,36 @@
+﻿@model ÖğrenciNotMVC.Models.EntityFramework.Tbl_Ogrencıler
+@{
+    ViewBag.Title = "OgrenciEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Öğrenci Adı:</label>
+        <input type="tel" name="OGRAD" class="form-control" />
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Soyadı:</label>
+        <input type="text" name="OGRSOYAD" class="form-control" />
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Fotoğraf:</label>
+        <input type="text" name="OGRFOTO" class="form-control" />
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Cinsiyet:</label>
+        <input type="text" name="OGRCINSIYET" class="form-control" />
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Kulüp:</label>
+        @Html.DropDownListFor(m => m.Tbl_Kulupler.KULUPID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:10px">
+        <button class="btn btn-primary">Öğrenci Ekle</button>
+    </div>
+
+
+
+
+</form>
+

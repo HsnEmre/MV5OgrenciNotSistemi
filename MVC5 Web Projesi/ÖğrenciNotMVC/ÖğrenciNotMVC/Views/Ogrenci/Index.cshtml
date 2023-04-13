@@ -1,0 +1,31 @@
+﻿@using ÖğrenciNotMVC.Models.EntityFramework
+@model List<Tbl_Ogrencıler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ÖĞRENCİ ID</th>
+        <th>ÖĞRENCİ AD</th>
+        <th>ÖĞRENCİ SOYAD</th>
+        <th>ÖĞRENCİ CINSIYET</th>
+        <th>ÖĞRENCİ KULUP</th>
+    </tr>
+    <tbody>
+        @foreach(var ogr in Model)
+            {
+                <tr>
+                    <td>@ogr.OGRENCIID</td>
+                    <td>@ogr.OGRAD</td>
+                    <td>@ogr.OGRSOYAD</td>
+                    <td>@ogr.OGRCINSIYET</td>
+                    <td>@ogr.OGRKULUP</td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+<a href="/Ogrenci/OgrenciEkle" class="btn btn-primary">Öğrenci Ekle</a>
+
